@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>সুন্দরবন খাঁটি মধু | ১০০% অর্গানিক Raw Honey</title>
+  <meta name="description" content="সুন্দরবনের গভীর থেকে সংগৃহীত খাঁটি মধু। কোনো ভেজাল নেই, কোনো প্রিজার্ভেটিভ নেই। সরাসরি মৌচাক থেকে আপনার দরজায়।" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍯</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ VARIABLES ============ */
+    :root {
+      --honey-gold: #D4860A;
+      --honey-dark: #A0640A;
+      --honey-light: #FFF3D6;
+      --honey-amber: #F5A623;
+      --honey-cream: #FEFAF0;
+      --dark-brown: #3B2000;
+      --text-dark: #2A1500;
+      --text-muted: #7A5C2E;
+      --white: #FFFFFF;
+      --shadow-gold: rgba(212, 134, 10, 0.25);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --radius-full: 50px;
+    }
+
+    /* ============ RESET ============ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+      background: var(--honey-cream);
+      color: var(--text-dark);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; }
+
+    /* ============ UTILITY ============ */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 88px 0; }
+
+    .section-label {
+      display: inline-block;
+      background: var(--honey-light);
+      color: var(--honey-dark);
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+      color: var(--dark-brown);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 560px;
+    }
+
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header .section-desc { margin: 0 auto; }
+
+    /* ============ NAVBAR ============ */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(254, 250, 240, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border-bottom: 1.5px solid rgba(212, 134, 10, 0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    .navbar.scrolled { box-shadow: 0 4px 20px rgba(160, 100, 10, 0.12); }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--honey-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover { color: var(--honey-gold); }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--honey-gold);
+      transition: width 0.25s;
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: var(--honey-gold) !important;
+      color: var(--white) !important;
+      padding: 9px 24px !important;
+      border-radius: var(--radius-full) !important;
+      font-weight: 700 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--honey-dark) !important; transform: translateY(-1px); }
+
+    /* Mobile burger */
+    .burger { display: none; background: none; border: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .burger span { display: block; width: 24px; height: 2.5px; background: var(--dark-brown); border-radius: 2px; transition: 0.3s; }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 68px;
+      background: linear-gradient(145deg, #FFF9EC 0%, #FEF0C0 50%, #FDE68A 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      top: -150px; right: -120px;
+      background: radial-gradient(circle, rgba(245, 166, 35, 0.18) 0%, transparent 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      bottom: -100px; left: -100px;
+      background: radial-gradient(circle, rgba(212, 134, 10, 0.1) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 134, 10, 0.1);
+      border: 1px solid rgba(212, 134, 10, 0.25);
+      color: var(--honey-dark);
+      padding: 7px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      color: var(--dark-brown);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--honey-gold);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--honey-gold), var(--honey-dark));
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: var(--radius-full);
+      font-size: 1.05rem;
+      font-weight: 700;
+      box-shadow: 0 8px 28px var(--shadow-gold);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px var(--shadow-gold);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid var(--honey-gold);
+      color: var(--honey-dark);
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn-outline:hover { background: var(--honey-light); }
+
+    .hero-stats { display: flex; gap: 36px; }
+
+    .stat-item { text-align: center; }
+    .stat-item strong { display: block; font-size: 1.9rem; font-weight: 700; color: var(--honey-gold); line-height: 1.2; }
+    .stat-item span { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+    .hero-visual { position: relative; display: flex; justify-content: center; }
+
+    .hero-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 24px 64px rgba(160, 100, 10, 0.3);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    .float-card {
+      position: absolute;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 14px 20px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: floatY 3s ease-in-out infinite;
+    }
+
+    .float-card strong { display: block; font-size: 1.1rem; color: var(--honey-gold); }
+    .float-card span { font-size: 0.72rem; color: var(--text-muted); }
+
+    .float-rating { top: 16px; right: -16px; animation-delay: 0s; }
+    .float-delivery {
+      bottom: 24px; left: -16px;
+      background: var(--honey-dark);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.88rem;
+      animation-delay: 1.5s;
+    }
+    .float-delivery span { color: rgba(255,255,255,0.8); }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ============ TRUST BAR ============ */
+    .trust-bar {
+      background: var(--dark-brown);
+      color: var(--white);
+      padding: 20px 0;
+    }
+
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    .trust-item .emoji { font-size: 1.3rem; }
+
+    /* ============ OUR STORY ============ */
+    .story { background: var(--white); }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .story-img {
+      width: 100%;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      box-shadow: 0 16px 48px rgba(160, 100, 10, 0.18);
+    }
+
+    .story-features { margin-top: 28px; display: flex; flex-direction: column; gap: 18px; }
+
+    .story-feat {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .feat-icon {
+      width: 44px; height: 44px;
+      background: var(--honey-light);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .feat-text h4 { font-weight: 700; color: var(--dark-brown); font-size: 0.98rem; margin-bottom: 2px; }
+    .feat-text p { color: var(--text-muted); font-size: 0.88rem; }
+
+    /* ============ BENEFITS ============ */
+    .benefits { background: var(--honey-cream); }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px 26px;
+      border: 1px solid rgba(212, 134, 10, 0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 48px var(--shadow-gold);
+    }
+
+    .b-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--honey-light), #FDE68A);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+    }
+
+    .benefit-card h3 { font-weight: 700; font-size: 1.08rem; color: var(--dark-brown); margin-bottom: 8px; }
+    .benefit-card p { color: var(--text-muted); font-size: 0.88rem; }
+
+    /* ============ QUALITY ============ */
+    .quality {
+      background: linear-gradient(140deg, var(--dark-brown) 0%, #5C3310 100%);
+      color: var(--white);
+    }
+
+    .quality .section-title { color: var(--white); }
+    .quality .section-desc { color: rgba(255,255,255,0.72); }
+    .quality .section-label { background: rgba(245, 166, 35, 0.15); color: var(--honey-amber); }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: flex-start;
+    }
+
+    .q-checks { display: flex; flex-direction: column; gap: 18px; margin-top: 32px; }
+
+    .q-check {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: background 0.2s;
+    }
+
+    .q-check:hover { background: rgba(255,255,255,0.1); }
+
+    .q-icon {
+      width: 44px; height: 44px;
+      background: rgba(245, 166, 35, 0.18);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .q-check h4 { color: var(--honey-amber); font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+    .q-check p { color: rgba(255,255,255,0.65); font-size: 0.85rem; }
+
+    .compare-box {
+      background: rgba(255,255,255,0.07);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .compare-box h3 { font-size: 1.2rem; font-weight: 700; color: var(--honey-amber); margin-bottom: 24px; text-align: center; }
+
+    .compare-table { width: 100%; border-collapse: collapse; }
+    .compare-table th { padding: 12px 14px; text-align: center; font-size: 0.82rem; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .compare-table td { padding: 13px 14px; text-align: center; font-size: 0.88rem; border-bottom: 1px solid rgba(255,255,255,0.06); color: rgba(255,255,255,0.75); }
+    .compare-table td:first-child { text-align: left; font-weight: 500; }
+    .td-good { color: #68D391 !important; font-weight: 700 !important; }
+    .td-bad { color: #FC8181 !important; }
+
+    /* ============ PRICING ============ */
+    .pricing { background: var(--white); }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      border: 2px solid rgba(212, 134, 10, 0.12);
+      text-align: center;
+      position: relative;
+      background: var(--white);
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 48px var(--shadow-gold);
+    }
+
+    .price-card.popular {
+      background: linear-gradient(145deg, var(--honey-gold), var(--honey-dark));
+      border-color: transparent;
+      color: var(--white);
+      transform: scale(1.03);
+      box-shadow: 0 16px 48px var(--shadow-gold);
+    }
+
+    .price-card.popular:hover { transform: scale(1.03) translateY(-8px); }
+
+    .popular-tag {
+      position: absolute;
+      top: -13px; left: 50%; transform: translateX(-50%);
+      background: var(--dark-brown);
+      color: var(--white);
+      padding: 5px 22px;
+      border-radius: var(--radius-full);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .pkg-emoji { font-size: 2.5rem; margin-bottom: 14px; display: block; }
+    .pkg-name { font-weight: 700; font-size: 1.15rem; margin-bottom: 4px; }
+    .price-card.popular .pkg-name { color: var(--white); }
+    .pkg-size { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 20px; }
+    .price-card.popular .pkg-size { color: rgba(255,255,255,0.72); }
+
+    .pkg-price { font-size: 2.6rem; font-weight: 800; color: var(--honey-gold); margin-bottom: 2px; }
+    .price-card.popular .pkg-price { color: var(--white); }
+    .pkg-was { text-decoration: line-through; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 22px; }
+    .price-card.popular .pkg-was { color: rgba(255,255,255,0.55); }
+
+    .pkg-perks {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    .pkg-perks li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pkg-perks li::before { content: '✓'; font-weight: 800; color: var(--honey-gold); }
+    .price-card.popular .pkg-perks li { color: rgba(255,255,255,0.85); }
+    .price-card.popular .pkg-perks li::before { color: var(--white); }
+
+    .btn-order {
+      width: 100%;
+      padding: 14px;
+      border-radius: var(--radius-full);
+      border: 2px solid var(--honey-gold);
+      background: transparent;
+      color: var(--honey-dark);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-order:hover { background: var(--honey-gold); color: var(--white); }
+    .price-card.popular .btn-order { background: var(--white); color: var(--honey-dark); border-color: var(--white); }
+    .price-card.popular .btn-order:hover { background: var(--honey-cream); }
+
+    .payment-note { text-align: center; margin-top: 32px; color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ============ REVIEWS ============ */
+    .reviews { background: var(--honey-cream); }
+
+    .review-summary {
+      text-align: center;
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .big-rating { font-size: 4rem; font-weight: 800; color: var(--honey-gold); line-height: 1; }
+    .stars { color: var(--honey-amber); font-size: 1.3rem; letter-spacing: 3px; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      border: 1px solid rgba(212, 134, 10, 0.08);
+      position: relative;
+    }
+
+    .review-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 12px; right: 20px;
+      font-size: 4.5rem;
+      color: rgba(212, 134, 10, 0.08);
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1;
+    }
+
+    .review-stars { color: var(--honey-amber); font-size: 0.95rem; letter-spacing: 2px; margin-bottom: 14px; }
+
+    .review-text { color: var(--text-dark); font-size: 0.93rem; margin-bottom: 20px; line-height: 1.65; position: relative; z-index: 1; }
+
+    .reviewer { display: flex; align-items: center; gap: 12px; }
+
+    .reviewer-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--honey-gold), var(--honey-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .reviewer-name { font-weight: 700; color: var(--dark-brown); font-size: 0.88rem; }
+    .reviewer-loc { color: var(--text-muted); font-size: 0.78rem; }
+
+    /* ============ FAQ ============ */
+    .faq-section { background: var(--white); }
+
+    .faq-list { max-width: 740px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--honey-cream);
+      border-radius: 16px;
+      border: 1px solid rgba(212, 134, 10, 0.1);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--dark-brown);
+      -webkit-user-select: none;
+      user-select: none;
+      gap: 12px;
+      transition: color 0.2s;
+    }
+
+    .faq-q:hover { color: var(--honey-gold); }
+
+    .faq-arrow {
+      font-size: 1rem;
+      color: var(--honey-gold);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 24px;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 24px 22px; }
+
+    /* ============ ORDER FORM ============ */
+    .order-section {
+      background: linear-gradient(145deg, #FFF3D6 0%, #FEEBC8 100%);
+      border-top: 3px solid var(--honey-amber);
+    }
+
+    .order-box {
+      max-width: 660px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      box-shadow: 0 16px 48px rgba(160, 100, 10, 0.12);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg.full { grid-column: 1 / -1; }
+
+    .fg label { font-weight: 600; font-size: 0.85rem; color: var(--dark-brown); }
+
+    .fg input, .fg select, .fg textarea {
+      padding: 13px 16px;
+      border-radius: var(--radius-sm);
+      border: 2px solid rgba(212, 134, 10, 0.18);
+      background: var(--honey-cream);
+      font-family: inherit;
+      font-size: 0.93rem;
+      color: var(--text-dark);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .fg input:focus, .fg select:focus, .fg textarea:focus {
+      border-color: var(--honey-gold);
+      box-shadow: 0 0 0 3px rgba(212, 134, 10, 0.1);
+    }
+
+    .fg textarea { resize: vertical; min-height: 80px; }
+
+    .btn-submit {
+      width: 100%;
+      padding: 17px;
+      background: linear-gradient(135deg, var(--honey-gold), var(--honey-dark));
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-full);
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 28px var(--shadow-gold);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 12px 36px var(--shadow-gold); }
+
+    .secure-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* ============ FOOTER ============ */
+    .site-footer {
+      background: var(--dark-brown);
+      color: rgba(255,255,255,0.72);
+      padding: 56px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--white); display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.85rem; max-width: 300px; line-height: 1.65; }
+
+    .footer-col h4 { color: var(--white); font-weight: 700; margin-bottom: 16px; font-size: 0.95rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col a { color: rgba(255,255,255,0.6); font-size: 0.85rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--honey-amber); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--honey-amber); }
+
+    /* ============ SUCCESS MODAL ============ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-overlay.show { display: flex; }
+
+    .modal-box {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-box .m-icon { font-size: 4rem; margin-bottom: 16px; display: block; }
+    .modal-box h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--dark-brown); margin-bottom: 12px; }
+    .modal-box p { color: var(--text-muted); margin-bottom: 28px; font-size: 0.95rem; }
+    .modal-box button {
+      background: var(--honey-gold);
+      color: var(--white);
+      padding: 12px 36px;
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .modal-box button:hover { background: var(--honey-dark); }
+
+    /* ============ STICKY ORDER BAR ============ */
+    .sticky-order {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--dark-brown);
+      color: var(--white);
+      padding: 14px 24px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transform: translateY(100%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sticky-order.visible { transform: translateY(0); }
+
+    .sticky-info { display: flex; align-items: center; gap: 12px; }
+    .sticky-info strong { font-size: 1.02rem; }
+    .sticky-info span { color: rgba(255,255,255,0.65); font-size: 0.85rem; }
+
+    .sticky-btn {
+      background: var(--honey-gold);
+      color: var(--white);
+      border: none;
+      padding: 10px 28px;
+      border-radius: var(--radius-full);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .sticky-btn:hover { background: var(--honey-amber); }
+
+    /* ============ SCROLL ANIMATIONS ============ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============ MOBILE ============ */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px; left: 0; right: 0;
+        background: var(--honey-cream);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 2px solid rgba(212, 134, 10, 0.2);
+        box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      }
+
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { order: -1; }
+      .float-rating { right: 8px; }
+      .float-delivery { left: 8px; }
+
+      .story-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .quality-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+      .price-card.popular { transform: none; }
+      .price-card.popular:hover { transform: translateY(-8px); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+      .order-box { padding: 28px 20px; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 64px 0; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; }
+      .trust-items { gap: 20px; }
+      .review-summary { gap: 16px; }
+      .sticky-order { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">🍯 সুন্দরবন মধু</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#story">আমাদের গল্প</a></li>
+        <li><a href="#benefits">উপকারিতা</a></li>
+        <li><a href="#pricing">দাম</a></li>
+        <li><a href="#reviews">রিভিউ</a></li>
+        <li><a href="#order" class="nav-cta">এখনই অর্ডার করুন</a></li>
+      </ul>
+
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">🌿 ১০০% অর্গানিক · কোনো ভেজাল নেই</div>
+
+          <h1 class="hero-title">
+            সুন্দরবনের <em>খাঁটি মধু</em> —<br/>
+            প্রকৃতির সেরা উপহার
+          </h1>
+
+          <p class="hero-desc">
+            সুন্দরবনের গভীর ম্যানগ্রোভ বন থেকে সংগৃহীত বিশুদ্ধ কাঁচা মধু। কোনো প্রিজার্ভেটিভ নেই, কোনো চিনি মেশানো নেই। সরাসরি মৌচাক থেকে আপনার দরজায়।
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#order" class="btn-primary">🛒 এখনই অর্ডার করুন</a>
+            <a href="#benefits" class="btn-outline">উপকারিতা জানুন →</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>৫,০০০+</strong>
+              <span>সন্তুষ্ট ক্রেতা</span>
+            </div>
+            <div class="stat-item">
+              <strong>১০০%</strong>
+              <span>অর্গানিক সার্টিফাইড</span>
+            </div>
+            <div class="stat-item">
+              <strong>৭ দিন</strong>
+              <span>মানি-ব্যাক গ্যারান্টি</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="images/hero.jpg" alt="সুন্দরবনের খাঁটি মধু — সোনালি রঙের বিশুদ্ধ কাঁচা মধু" class="hero-img" />
+
+          <div class="float-card float-rating">
+            <strong>⭐ 4.9/5</strong>
+            <span>৩,৮০০+ রিভিউ</span>
+          </div>
+
+          <div class="float-card float-delivery">
+            🚚 ফ্রি হোম ডেলিভারি
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TRUST BAR ======== -->
+  <div class="trust-bar">
+    <div class="trust-items">
+      <div class="trust-item"><span class="emoji">🔬</span> ল্যাব টেস্টেড</div>
+      <div class="trust-item"><span class="emoji">🌿</span> কোনো কৃত্রিম উপাদান নেই</div>
+      <div class="trust-item"><span class="emoji">🐝</span> সরাসরি মৌচাক থেকে</div>
+      <div class="trust-item"><span class="emoji">📦</span> ৪৮ ঘণ্টায় ডেলিভারি</div>
+      <div class="trust-item"><span class="emoji">🔄</span> ৭ দিনের রিটার্ন পলিসি</div>
+    </div>
+  </div>
+
+  <!-- ======== OUR STORY ======== -->
+  <section class="story" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <img src="images/farm.jpg" alt="সুন্দরবনের মৌয়াল মধু সংগ্রহ করছেন" class="story-img reveal" />
+        </div>
+
+        <div>
+          <div class="section-label">আমাদের গল্প</div>
+          <h2 class="section-title">সুন্দরবন থেকে<br/>আপনার রান্নাঘর পর্যন্ত</h2>
+          <p class="section-desc" style="margin-bottom: 8px;">
+            বাংলাদেশের সুন্দরবন — বিশ্বের সবচেয়ে বড় ম্যানগ্রোভ বন। এখানকার মৌমাছিরা খলিশা, গরান, বাইনসহ শত শত প্রজাতির বনফুল থেকে মধু সংগ্রহ করে। এই বিশেষ পরিবেশের কারণে সুন্দরবনের মধু পৃথিবীর সেরা মধুগুলোর একটি।
+          </p>
+
+          <div class="story-features">
+            <div class="story-feat reveal">
+              <div class="feat-icon">🌳</div>
+              <div class="feat-text">
+                <h4>প্রাকৃতিক মৌচাক থেকে সংগ্রহ</h4>
+                <p>সুন্দরবনের গভীরে প্রশিক্ষিত মৌয়ালরা ঐতিহ্যবাহী পদ্ধতিতে মধু সংগ্রহ করেন — কোনো কৃত্রিম মৌবাক্স নয়।</p>
+              </div>
+            </div>
+            <div class="story-feat reveal">
+              <div class="feat-icon">🧪</div>
+              <div class="feat-text">
+                <h4>তিন-স্তরের মান নিয়ন্ত্রণ</h4>
+                <p>সংগ্রহের পর মধু তিনটি ভিন্ন ল্যাবে পরীক্ষা করা হয় — ভেজাল, আর্দ্রতা ও অ্যান্টিঅক্সিডেন্ট মাত্রা যাচাই হয়।</p>
+              </div>
+            </div>
+            <div class="story-feat reveal">
+              <div class="feat-icon">🤝</div>
+              <div class="feat-text">
+                <h4>মৌয়ালদের ন্যায্য মূল্য</h4>
+                <p>আমরা সরাসরি মৌয়ালদের কাছ থেকে কিনি। কোনো মিডলম্যান নেই, তাই তারা ভালো দাম পান ও আপনি পান খাঁটি মধু।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== BENEFITS ======== -->
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">স্বাস্থ্য উপকারিতা</div>
+        <h2 class="section-title">কেন প্রতিদিন মধু খাবেন?</h2>
+        <p class="section-desc">সুন্দরবনের এই বিশেষ মধুতে আছে প্রকৃতির অনন্য সব উপাদান যা আপনার শরীর ও মনকে সুস্থ রাখে।</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="b-icon">🛡️</div>
+          <h3>রোগ প্রতিরোধ ক্ষমতা বাড়ায়</h3>
+          <p>প্রাকৃতিক অ্যান্টিঅক্সিডেন্ট ও অ্যান্টিব্যাকটেরিয়াল উপাদান শরীরের ইমিউন সিস্টেমকে শক্তিশালী করে।</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="b-icon">❤️</div>
+          <h3>হৃদযন্ত্রের যত্ন</h3>
+          <p>নিয়মিত মধু সেবনে কোলেস্টেরল নিয়ন্ত্রণে থাকে এবং হৃদরোগের ঝুঁকি কমে। রক্তচাপ নিয়ন্ত্রণেও সহায়ক।</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="b-icon">✨</div>
+          <h3>ত্বকের উজ্জ্বলতা</h3>
+          <p>মধুর প্রাকৃতিক ময়েশ্চারাইজিং গুণ ত্বককে নরম, উজ্জ্বল ও তারুণ্যময় রাখে। ব্রণ প্রতিরোধেও কার্যকর।</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="b-icon">😴</div>
+          <h3>ভালো ঘুমের সহায়ক</h3>
+          <p>রাতে ঘুমানোর আগে এক চামচ মধু মেলাটোনিন উৎপাদন বাড়ায়, গভীর ও আরামদায়ক ঘুম নিশ্চিত করে।</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="b-icon">⚡</div>
+          <h3>তাৎক্ষণিক শক্তি</h3>
+          <p>প্রাকৃতিক গ্লুকোজ ও ফ্রুকটোজ দ্রুত এনার্জি দেয়। খেলাধুলার আগে বা ক্লান্তিতে আদর্শ এনার্জি বুস্টার।</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="b-icon">🫁</div>
+          <h3>সর্দি-কাশিতে মহৌষধ</h3>
+          <p>আদা ও তুলসির সাথে মধু মিশিয়ে খেলে গলাব্যথা, কাশি ও শ্বাসকষ্টে দ্রুত উপশম মেলে।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== QUALITY ASSURANCE ======== -->
+  <section class="quality" id="quality">
+    <div class="container">
+      <div class="quality-grid">
+        <div>
+          <div class="section-label">গুণমানের নিশ্চয়তা</div>
+          <h2 class="section-title">ভেজাল মধু চেনার উপায়<br/>ও আমাদের প্রতিশ্রুতি</h2>
+
+          <div class="q-checks">
+            <div class="q-check reveal">
+              <div class="q-icon">💧</div>
+              <div>
+                <h4>পানি পরীক্ষা</h4>
+                <p>এক গ্লাস পানিতে মধু ঢালুন — খাঁটি মধু তলায় বসে যাবে, ভেজাল মধু গুলে যাবে।</p>
+              </div>
+            </div>
+            <div class="q-check reveal">
+              <div class="q-icon">🔥</div>
+              <div>
+                <h4>আগুন পরীক্ষা</h4>
+                <p>তুলায় মধু মাখিয়ে আগুন দিন — খাঁটি মধু জ্বলবে, ভেজাল মধুতে পানি থাকায় জ্বলবে না।</p>
+              </div>
+            </div>
+            <div class="q-check reveal">
+              <div class="q-icon">🧫</div>
+              <div>
+                <h4>ল্যাব সার্টিফিকেট</h4>
+                <p>প্রতিটি ব্যাচের সাথে BSTI অনুমোদিত ল্যাবের সার্টিফিকেট পাবেন। QR কোড স্ক্যান করে যাচাই করুন।</p>
+              </div>
+            </div>
+            <div class="q-check reveal">
+              <div class="q-icon">🌡️</div>
+              <div>
+                <h4>আর্দ্রতা নিয়ন্ত্রণ</h4>
+                <p>আমাদের মধুর আর্দ্রতা সর্বদা ১৮%-এর নিচে — এটি দীর্ঘদিন সংরক্ষণের চাবিকাঠি।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-box reveal">
+          <h3>🏆 আমাদের মধু vs বাজারের মধু</h3>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th style="text-align:left; color:rgba(255,255,255,0.5);">বিষয়</th>
+                <th style="color:#68D391;">আমাদের মধু ✓</th>
+                <th style="color:#FC8181;">বাজারের মধু ✗</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="text-align:left;">উৎস</td><td class="td-good">সুন্দরবন</td><td class="td-bad">অজানা</td></tr>
+              <tr><td style="text-align:left;">প্রক্রিয়াজাত</td><td class="td-good">কাঁচা / Raw</td><td class="td-bad">তাপ-প্রক্রিয়াজাত</td></tr>
+              <tr><td style="text-align:left;">চিনি মিশ্রণ</td><td class="td-good">শূন্য</td><td class="td-bad">৩০ — ৬০%</td></tr>
+              <tr><td style="text-align:left;">ল্যাব টেস্ট</td><td class="td-good">প্রতিটি ব্যাচ</td><td class="td-bad">নেই</td></tr>
+              <tr><td style="text-align:left;">প্রিজার্ভেটিভ</td><td class="td-good">শূন্য</td><td class="td-bad">আছে</td></tr>
+              <tr><td style="text-align:left;">মানি-ব্যাক</td><td class="td-good">৭ দিন</td><td class="td-bad">নেই</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PRICING ======== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">প্যাকেজ ও মূল্য</div>
+        <h2 class="section-title">আপনার পরিবারের জন্য বেছে নিন</h2>
+        <p class="section-desc">যত বেশি অর্ডার, তত বেশি সাশ্রয়। সব প্যাকেজে ফ্রি হোম ডেলিভারি।</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="price-card reveal">
+          <span class="pkg-emoji">🍯</span>
+          <div class="pkg-name">স্টার্টার প্যাক</div>
+          <div class="pkg-size">২৫০ গ্রাম</div>
+          <div class="pkg-price">&#2547; ৪৫০</div>
+          <div class="pkg-was">&#2547; ৫৫০</div>
+          <ul class="pkg-perks">
+            <li>খাঁটি Raw মধু</li>
+            <li>ল্যাব সার্টিফিকেট সহ</li>
+            <li>ফ্রি হোম ডেলিভারি</li>
+            <li>৭ দিনের রিটার্ন পলিসি</li>
+          </ul>
+          <button class="btn-order" onclick="selectPkg('স্টার্টার প্যাক (২৫০গ্রাম) — ৪৫০ টাকা')">অর্ডার করুন</button>
+        </div>
+
+        <!-- Family — Featured -->
+        <div class="price-card popular reveal">
+          <div class="popular-tag">⭐ সবচেয়ে জনপ্রিয়</div>
+          <span class="pkg-emoji">🏺</span>
+          <div class="pkg-name">ফ্যামিলি প্যাক</div>
+          <div class="pkg-size">৫০০ গ্রাম</div>
+          <div class="pkg-price">&#2547; ৭৯০</div>
+          <div class="pkg-was">&#2547; ১,০০০</div>
+          <ul class="pkg-perks">
+            <li>খাঁটি Raw মধু</li>
+            <li>ল্যাব সার্টিফিকেট সহ</li>
+            <li>ফ্রি এক্সপ্রেস ডেলিভারি</li>
+            <li>প্রিমিয়াম গিফট বক্স</li>
+            <li>বোনাস: রেসিপি কার্ড</li>
+            <li>৭ দিনের রিটার্ন পলিসি</li>
+          </ul>
+          <button class="btn-order" onclick="selectPkg('ফ্যামিলি প্যাক (৫০০গ্রাম) — ৭৯০ টাকা')">এখনই অর্ডার করুন</button>
+        </div>
+
+        <!-- Mega -->
+        <div class="price-card reveal">
+          <span class="pkg-emoji">🪣</span>
+          <div class="pkg-name">মেগা প্যাক</div>
+          <div class="pkg-size">১ কেজি</div>
+          <div class="pkg-price">&#2547; ১,৩৯০</div>
+          <div class="pkg-was">&#2547; ১,৮০০</div>
+          <ul class="pkg-perks">
+            <li>খাঁটি Raw মধু</li>
+            <li>ল্যাব সার্টিফিকেট সহ</li>
+            <li>ফ্রি এক্সপ্রেস ডেলিভারি</li>
+            <li>প্রিমিয়াম প্যাকেজিং</li>
+            <li>৩০ দিনের সাপ্লাই</li>
+            <li>৭ দিনের রিটার্ন পলিসি</li>
+          </ul>
+          <button class="btn-order" onclick="selectPkg('মেগা প্যাক (১কেজি) — ১,৩৯০ টাকা')">অর্ডার করুন</button>
+        </div>
+      </div>
+
+      <p class="payment-note">
+        💳 বিকাশ, নগদ, রকেট ও ক্যাশ অন ডেলিভারি — সবই গ্রহণযোগ্য
+      </p>
+    </div>
+  </section>
+
+  <!-- ======== REVIEWS ======== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">গ্রাহক রিভিউ</div>
+        <h2 class="section-title">ক্রেতারা যা বলছেন</h2>
+      </div>
+
+      <div class="review-summary">
+        <div>
+          <div class="big-rating">4.9</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div style="color: var(--text-muted);">
+          <div style="font-size:1.15rem; font-weight:600; color: var(--dark-brown);">৩,৮৪০+ রিভিউ</div>
+          <div>৯৭% ক্রেতা আবার কিনেছেন</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">সত্যিই অবাক হয়ে গেলাম! আগে বাজার থেকে যে মধু কিনতাম সেটা পানিতে ঢালতেই গুলে যেত। এটা তলায় বসে থাকে। স্বাদও অনেক বেশি প্রাকৃতিক ও সুন্দর। পরিবারের সবাই খুশি!</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">র</div>
+            <div>
+              <div class="reviewer-name">রাহেলা বেগম</div>
+              <div class="reviewer-loc">📍 ঢাকা, মিরপুর</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">আমার ছেলের প্রতিদিন সকালে গরম পানিতে মধু মিশিয়ে দিই। দুই মাসে সর্দি-কাশি অনেক কমে গেছে। ডাক্তারও বললেন রোগ প্রতিরোধ ক্ষমতা বেড়েছে।</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">আ</div>
+            <div>
+              <div class="reviewer-name">আব্দুল করিম</div>
+              <div class="reviewer-loc">📍 চট্টগ্রাম</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">উপহার হিসেবে পাঠিয়েছিলাম মামার বাড়িতে। তারা এতটাই খুশি হয়েছেন যে এখন সরাসরি অর্ডার দিচ্ছেন। প্যাকেজিং দেখতে অনেক সুন্দর, গিফট করার জন্য পারফেক্ট!</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">ন</div>
+            <div>
+              <div class="reviewer-name">নাফিসা ইসলাম</div>
+              <div class="reviewer-loc">📍 সিলেট</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">রান্নায় ব্যবহার করি, চায়ে দিই, মুখে মাখি — সব কাজে অসাধারণ! মধুর রঙ ও ঘনত্ব দেখেই বোঝা যায় এটা আসল। দাম একটু বেশি মনে হলেও মান বিচারে একদম যৌক্তিক।</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">স</div>
+            <div>
+              <div class="reviewer-name">সুমাইয়া খাতুন</div>
+              <div class="reviewer-loc">📍 রাজশাহী</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">ডায়াবেটিস রোগী হিসেবে মধু নিয়ে সন্দিহান ছিলাম। ডাক্তারের পরামর্শে Raw মধু শুরু করলাম। রক্তে শর্করার মাত্রা হঠাৎ বাড়ছে না। খুবই সন্তুষ্ট!</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">ম</div>
+            <div>
+              <div class="reviewer-name">মোঃ হাসান</div>
+              <div class="reviewer-loc">📍 ময়মনসিংহ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">ডেলিভারি ৪৮ ঘণ্টায় পেয়ে গেলাম! QR কোড স্ক্যান করে ল্যাব রিপোর্ট দেখলাম — সত্যিই বিশ্বাসযোগ্য। এমন স্বচ্ছ ব্যবসা কমই দেখা যায়।</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">ফ</div>
+            <div>
+              <div class="reviewer-name">ফাতেমা তুজ জোহরা</div>
+              <div class="reviewer-loc">📍 কুমিল্লা</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FAQ ======== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">সাধারণ প্রশ্নোত্তর</div>
+        <h2 class="section-title">আপনার মনে যা আসে</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            মধু জমে গেলে কি নষ্ট হয়ে যায়?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">
+            মোটেই না! মধু জমে যাওয়া (Crystallization) আসলে খাঁটি মধুর প্রমাণ। ভেজাল মধু বা চিনি মেশানো মধু জমে না। জমে গেলে হালকা গরম পানিতে বোতল রেখে গলিয়ে নিন — কখনো মাইক্রোওয়েভে দেবেন না, তাতে এনজাইম নষ্ট হয়।
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            প্রতিদিন কতটুকু মধু খাওয়া উচিত?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">
+            প্রাপ্তবয়স্কদের জন্য দৈনিক ১ — ৩ চা চামচ যথেষ্ট। সকালে খালি পেটে গরম পানিতে মিশিয়ে বা সরাসরি খেতে পারেন। ১ বছরের বেশি বয়সী শিশুদের জন্য ½ চা চামচ। <strong>১ বছরের কম বয়সী শিশুদের মধু দেবেন না।</strong>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ডেলিভারি কত দিনে পাবো?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">
+            ঢাকার মধ্যে ২৪ ঘণ্টা, ঢাকার বাইরে ৪৮ ঘণ্টার মধ্যে ডেলিভারি দেওয়া হয়। দেশের যেকোনো প্রান্তে ডেলিভারি সম্ভব। অর্ডার দেওয়ার পর SMS-এ ট্র্যাকিং নম্বর পাঠানো হবে।
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            পেমেন্ট কীভাবে করবো?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">
+            আমরা বিকাশ, নগদ, রকেট এবং ক্যাশ অন ডেলিভারি গ্রহণ করি। ক্যাশ অন ডেলিভারিতে মাল হাতে পেয়ে টাকা দিলেই হবে — আগে কোনো পেমেন্ট করতে হবে না।
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            মধু পছন্দ না হলে বা ভেজাল মনে হলে?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">
+            ৭ দিনের মানি-ব্যাক গ্যারান্টি। পণ্য পাওয়ার ৭ দিনের মধ্যে যেকোনো সমস্যা জানালে সম্পূর্ণ টাকা ফেরত দেওয়া হবে অথবা নতুন পণ্য পাঠানো হবে — কোনো প্রশ্ন ছাড়াই।
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            কীভাবে সংরক্ষণ করবো?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">
+            ঘরের স্বাভাবিক তাপমাত্রায় এয়ারটাইট ঢাকনা দিয়ে রাখুন। ফ্রিজে রাখার দরকার নেই। সরাসরি সূর্যের আলো ও আর্দ্রতা থেকে দূরে রাখুন। সঠিকভাবে রাখলে ১ — ২ বছর ভালো থাকবে।
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ORDER FORM ======== -->
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">অর্ডার করুন</div>
+        <h2 class="section-title">আজই আপনার মধু অর্ডার দিন 🍯</h2>
+        <p class="section-desc">ফর্মটি পূরণ করুন — আমরা নিশ্চিত করে ফোন করবো ও ৪৮ ঘণ্টায় পৌঁছে দেবো।</p>
+      </div>
+
+      <div class="order-box reveal">
+        <form id="orderForm" onsubmit="submitOrder(event)">
+          <div class="form-grid">
+            <div class="fg">
+              <label for="fname">আপনার নাম *</label>
+              <input type="text" id="fname" name="name" placeholder="যেমন: রাহেলা বেগম" required />
+            </div>
+            <div class="fg">
+              <label for="fphone">মোবাইল নম্বর *</label>
+              <input type="tel" id="fphone" name="phone" placeholder="01XXXXXXXXX" required />
+            </div>
+            <div class="fg full">
+              <label for="faddress">ডেলিভারি ঠিকানা *</label>
+              <input type="text" id="faddress" name="address" placeholder="বাড়ি নং, রাস্তা, এলাকা, জেলা" required />
+            </div>
+            <div class="fg">
+              <label for="fpackage">প্যাকেজ বেছে নিন *</label>
+              <select id="fpackage" name="package" required>
+                <option value="">— প্যাকেজ নির্বাচন করুন —</option>
+                <option value="স্টার্টার প্যাক (২৫০গ্রাম) — ৪৫০ টাকা">স্টার্টার ২৫০গ্রাম — ৪৫০ টাকা</option>
+                <option value="ফ্যামিলি প্যাক (৫০০গ্রাম) — ৭৯০ টাকা">ফ্যামিলি ৫০০গ্রাম — ৭৯০ টাকা ⭐</option>
+                <option value="মেগা প্যাক (১কেজি) — ১,৩৯০ টাকা">মেগা ১ কেজি — ১,৩৯০ টাকা</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="fpay">পেমেন্ট পদ্ধতি</label>
+              <select id="fpay" name="payment">
+                <option value="ক্যাশ অন ডেলিভারি">💵 ক্যাশ অন ডেলিভারি</option>
+                <option value="বিকাশ">📱 বিকাশ</option>
+                <option value="নগদ">📱 নগদ</option>
+                <option value="রকেট">📱 রকেট</option>
+              </select>
+            </div>
+            <div class="fg full">
+              <label for="fnote">বিশেষ নির্দেশনা (ঐচ্ছিক)</label>
+              <textarea id="fnote" name="note" placeholder="যেমন: গিফট র‍্যাপিং চাই, নির্দিষ্ট সময়ে ডেলিভারি চাই..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit">🍯 অর্ডার নিশ্চিত করুন</button>
+        </form>
+
+        <p class="secure-note">🔒 আপনার তথ্য সম্পূর্ণ সুরক্ষিত · ক্যাশ অন ডেলিভারিতে মাল দেখে টাকা দিন</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">🍯 সুন্দরবন মধু</div>
+          <p>সুন্দরবনের গভীর থেকে সংগৃহীত বিশুদ্ধ কাঁচা মধু। আমাদের লক্ষ্য — প্রকৃতির সেরা উপহার আপনার ঘরে পৌঁছে দেওয়া। খাঁটি মধু, সুস্থ জীবন।</p>
+          <div style="margin-top: 18px; display: flex; gap: 14px; font-size: 1.5rem;">
+            <a href="#" style="color: rgba(255,255,255,0.6);" aria-label="Facebook">📘</a>
+            <a href="#" style="color: rgba(255,255,255,0.6);" aria-label="Instagram">📸</a>
+            <a href="#" style="color: rgba(255,255,255,0.6);" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>দ্রুত লিঙ্ক</h4>
+          <ul>
+            <li><a href="#story">আমাদের গল্প</a></li>
+            <li><a href="#benefits">উপকারিতা</a></li>
+            <li><a href="#quality">মান নিয়ন্ত্রণ</a></li>
+            <li><a href="#pricing">দাম ও প্যাকেজ</a></li>
+            <li><a href="#reviews">রিভিউ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>যোগাযোগ</h4>
+          <ul>
+            <li><a href="tel:+8801700000000">📞 ০১৭০০-০০০০০০</a></li>
+            <li><a href="mailto:info@sundarbanmadhu.com">✉️ info@sundarbanmadhu.com</a></li>
+            <li><a href="#">💬 Facebook Messenger</a></li>
+            <li><a href="#faq">❓ সাধারণ প্রশ্নোত্তর</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; ২০২৬ সুন্দরবন মধু। সকল অধিকার সংরক্ষিত।</span>
+        <div style="display:flex; gap:18px;">
+          <a href="#">গোপনীয়তা নীতি</a>
+          <a href="#">রিটার্ন পলিসি</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== SUCCESS MODAL ======== -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+      <span class="m-icon">🎉</span>
+      <h3>অর্ডার সফল হয়েছে!</h3>
+      <p>ধন্যবাদ! আমরা শীঘ্রই আপনাকে ফোন করে অর্ডার নিশ্চিত করবো। ৪৮ ঘণ্টার মধ্যে পণ্য পৌঁছে যাবে ইনশাআল্লাহ।</p>
+      <button onclick="closeModal()">ঠিক আছে ✓</button>
+    </div>
+  </div>
+
+  <!-- ======== STICKY ORDER BAR ======== -->
+  <div class="sticky-order" id="stickyBar">
+    <div class="sticky-info">
+      <span style="font-size:1.5rem;">🍯</span>
+      <div>
+        <strong>সুন্দরবন খাঁটি মধু</strong>
+        <span style="display:block;">মাত্র &#2547; ৪৫০ থেকে শুরু</span>
+      </div>
+    </div>
+    <button class="sticky-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">
+      এখনই অর্ডার করুন 🛒
+    </button>
+  </div>
+
+  <!-- ======== SCRIPTS ======== -->
+  <script>
+    // ——— Mobile menu ———
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      const spans = burger.querySelectorAll('span');
+      if (navLinks.classList.contains('open')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+      }
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+      });
+    });
+
+    // ——— Navbar scroll shadow ———
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ——— FAQ toggle ———
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    // ——— Select package from pricing cards ———
+    function selectPkg(pkg) {
+      const sel = document.getElementById('fpackage');
+      // find best matching option
+      for (const opt of sel.options) {
+        if (opt.value === pkg) { sel.value = pkg; break; }
+      }
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ——— Order form submit ———
+    function submitOrder(e) {
+      e.preventDefault();
+      document.getElementById('successModal').classList.add('show');
+      document.getElementById('orderForm').reset();
+    }
+
+    // ——— Close modal ———
+    function closeModal() {
+      document.getElementById('successModal').classList.remove('show');
+    }
+
+    document.getElementById('successModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // ——— Sticky bar visibility ———
+    const stickyBar = document.getElementById('stickyBar');
+    const heroSection = document.getElementById('hero');
+    const orderSection = document.getElementById('order');
+
+    function updateSticky() {
+      const heroBot = heroSection.getBoundingClientRect().bottom;
+      const orderTop = orderSection.getBoundingClientRect().top;
+      stickyBar.classList.toggle('visible', heroBot < 0 && orderTop > window.innerHeight);
+    }
+
+    window.addEventListener('scroll', updateSticky, { passive: true });
+
+    // ——— Smooth scroll for hash links ———
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ——— Scroll-reveal animation ———
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
